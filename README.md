@@ -1,5 +1,7 @@
 # Portafolio Web - Richard
 
+![Vista previa del portafolio](public/preview.png)
+
 Bienvenido a mi portafolio web. Este proyecto es una muestra de mis habilidades y experiencia en desarrollo web.
 
 ## Características
@@ -36,6 +38,20 @@ Bienvenido a mi portafolio web. Este proyecto es una muestra de mis habilidades 
    ```
 4. Abrir en el navegador: `http://localhost:4321`
 
+## Estructura del Proyecto
+```
+portafolio-web-cv/
+│-- public/          # Recursos estáticos como imágenes y fuentes
+│-- src/
+│   │-- components/  # Componentes reutilizables de React
+│   │-- layouts/     # Plantillas de diseño de las páginas
+│   │-- pages/       # Páginas principales del portafolio
+│   │-- styles/      # Archivos de estilos CSS/SCSS
+│-- astro.config.mjs # Configuración de Astro
+│-- package.json     # Dependencias y scripts del proyecto
+│-- README.md        # Documentación del proyecto
+```
+
 ## Personalización
 Puedes cambiar el logo, colores y contenido en los archivos dentro de `src/`.
 
@@ -50,4 +66,6 @@ Luego, puedes desplegarlo en plataformas como Vercel o Netlify.
 Si deseas contactarme, visita la sección de contacto en el portafolio o envíame un correo a [tuemail@example.com](mailto:tuemail@example.com).
 
 ¡Gracias por visitar mi portafolio! 🚀
+
+
 
