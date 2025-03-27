@@ -1,6 +1,6 @@
 # Portafolio Web - Richard
 
-![Vista previa del portafolio](public/preview.png)
+![Vista previa del portafolio](public/Captura de pantalla 2025-03-24 152143.png)
 
 Bienvenido a mi portafolio web. Este proyecto es una muestra de mis habilidades y experiencia en desarrollo web.
 
@@ -25,7 +25,7 @@ Bienvenido a mi portafolio web. Este proyecto es una muestra de mis habilidades 
 ### Pasos
 1. Clonar el repositorio:
    ```bash
-   git clone https://github.com/tuusuario/portafolio-web-cv.git
+   git clone https://github.com/richardcastiblancoo/portafolio.git
    cd portafolio-web-cv
    ```
 2. Instalar dependencias:

@@ -1,0 +1,132 @@
+---
+const technologies = [
+    { name: "PHP", icon: "devicon-php-plain" },
+    { name: "CSS", icon: "devicon-css3-plain" },
+    { name: "JavaScript", icon: "devicon-javascript-plain" },
+    { name: "MySQL", icon: "devicon-mysql-plain" },
+];
+---
+
+<h2>Proyectos</h2>
+
+<div class="project-card">
+    <div class="project-image">
+        <img src="logo5.png" alt="logo5.png" />
+    </div>
+    <div class="project-content">
+        <h3>COTEMAG 📚 Sistema de Gestión Escolaro</h3>
+        <p>
+            Este es un sistema web desarrollado en HTML, CSS, JAVASCRIPT, PHP, MYSQL, que permite a administradores, profesores y estudiantes gestionar calificaciones e información académica.
+        </p>
+
+        <div class="technologies">
+            <h4>Tecnologías utilizadas:</h4>
+            <div class="tech-icons">
+                {
+                    technologies.map((tech) => (
+                        <div class="tech-item">
+                            <i class={tech.icon} />
+                            <span>{tech.name}</span>
+                        </div>
+                    ))
+                }
+            </div>
+        </div>
+
+        <div class="project-links">
+            <a href="#" class="project-btn">Ver Proyecto</a>
+            <a href="#" class="github-btn">GitHub</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    h2{
+        text-align: center;
+        color: wheat;
+        font-size: 2.3rem;
+        margin-left: -500px;
+    }
+
+    .project-card {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        width: 350px;
+        margin-left: 600px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+
+    .project-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .project-image img {
+        width: 140px;
+        height: 140px;
+        object-fit: cover;
+    }
+
+    .project-content {
+        padding: 1.5rem;
+    }
+
+    h3 {
+        color: #333;
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .technologies {
+        margin: 1rem 0;
+    }
+
+    .tech-icons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 0.5rem;
+    }
+
+    .tech-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f5f5f5;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+    }
+
+    .project-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .project-btn,
+    .github-btn {
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background 0.3s ease;
+    }
+
+    .project-btn {
+        background: #007bff;
+        color: white;
+    }
+
+    .github-btn {
+        background: #333;
+        color: white;
+    }
+
+    .project-btn:hover,
+    .github-btn:hover {
+        opacity: 0.9;
+    }
+</style>

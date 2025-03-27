@@ -1,0 +1,70 @@
+---
+interface Experience {
+    title: string;
+    company: string;
+    description: string;
+    date: string;
+    companyLogo?: string;
+}
+
+const EXPERIENCE: Experience[] = [
+    {
+        title: " Sistema de Gestión Escolar",
+        company: "Cotemag",
+        description: "Este es un sistema web desarrollado en HTML, CSS, JAVASCRIPT, PHP, MYSQL, que permite a administradores, profesores y estudiantes gestionar calificaciones e información académica.",
+        date: "marzo 2025 - Present",
+        companyLogo: "logo5.png",
+    },
+];
+---
+
+<section class="flex flex-col gap-8">
+    <h2 class="text-3xl font-semibold text-[#38bdf8] mb-8">EXPERIENCIA</h2>
+    <div class="flex flex-col gap-8">
+        {
+            EXPERIENCE.map(
+                ({ title, company, description, date, companyLogo }) => (
+                    <article class="flex flex-col gap-2">
+                        <div class="flex items-center gap-4">
+                            {companyLogo && (
+                                <img
+                                    src={companyLogo}
+                                    alt={`${company} logo`}
+                                    class="size-12 rounded"
+                                />
+                            )}
+                            <div>
+                                <h3 class="text-xl font-semibold text-gray-100">
+                                    {title} {company}
+                                </h3>
+                                <p class="parrafo">{date}</p>
+                            </div>
+                        </div>
+                        <p class="parrafo">{description}</p>
+                    </article>
+                ),
+            )
+        }
+    </div>
+</section>
+
+<style>
+    section {
+        max-width: 700px;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 150px;
+    }
+
+    h2 {
+        color: wheat;
+    }
+
+    h3 {
+        color: whitesmoke;
+    }
+
+    .parrafo {
+        color: white; 
+    }
+</style>
