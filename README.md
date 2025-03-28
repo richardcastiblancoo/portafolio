@@ -1,6 +1,6 @@
 # Portafolio Web - Richard
 
-![Vista previa del portafolio](public/portafolio.png)
+![Vista previa del portafolio](public/portafolioweb-1img.png)
 
 Bienvenido a mi portafolio web. Este proyecto es una muestra de mis habilidades y experiencia en desarrollo web.
 
@@ -12,15 +12,11 @@ Bienvenido a mi portafolio web. Este proyecto es una muestra de mis habilidades 
 
 ## Tecnologías Utilizadas
 - **Astro**: Framework para generar sitios web estáticos y rápidos
-- **TypeScript**: Tipado estático para mayor seguridad en el código
-- **React**: Componentes reutilizables e interactivos
-- **CSS/SCSS**: Estilos personalizados
-- **Astro DB**: Manejo de datos dinámicos
 
 ## Instalación y Uso
 ### Requisitos
 - Node.js 18+
-- npm o pnpm
+- npm o npx 
 
 ### Pasos
 1. Clonar el repositorio:
@@ -63,7 +59,7 @@ npm run build
 Luego, puedes desplegarlo en plataformas como Vercel o Netlify.
 
 ## Contacto
-Si deseas contactarme, visita la sección de contacto en el portafolio o envíame un correo a [tuemail@example.com](mailto:tuemail@example.com).
+Si deseas contactarme, visita la sección de contacto en el portafolio o envíame un correo a [Richardcastiblanco@gmail.com](mailto:Richardcastiblanco@gmail.com).
 
 ¡Gracias por visitar mi portafolio! 🚀
 

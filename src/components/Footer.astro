@@ -4,14 +4,6 @@ const currentYear = new Date().getFullYear();
 
 <footer>
     <div class="container">
-        <h2>Contacto</h2>
-        <p class="description">
-            Soy un profesional altamente motivado, en constante desarrollo de
-            mis habilidades y enfocado en el crecimiento continuo. Tengo plena
-            confianza en mi capacidad para alcanzar nuevos desafíos, aportar
-            soluciones innovadoras y seguir evolucionando en mi carrera.
-        </p>
-
         <a href="mailto:Richardcastiblanco4@gmail.com" class="email-link">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +53,6 @@ const currentYear = new Date().getFullYear();
                 </svg>
             </a>
         </div>
-        <hr />
         <div class="copyright">
             <p>
                 &copy; {currentYear} Richard Castiblanco todo los derecho de autor
@@ -72,10 +63,12 @@ const currentYear = new Date().getFullYear();
 </footer>
 
 <style>
-    footer {
-        background-color: #1c1c1c;
-        color: white;
-        padding: 4rem 0;
+    footer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 
     .container {
