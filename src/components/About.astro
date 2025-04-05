@@ -3,7 +3,7 @@
 ---
 
 <div class="container-1">
-    <img src="/avatar.png" class="avatar" title="avatar" alt="avatar" />
+    <img src="/richardcasti.png" class="avatar" title="richard" alt="richard" />
 </div>
 
 <div class="container2">
@@ -36,6 +36,7 @@
 
     .avatar {
         width: 200px;
+        border-radius: 50%;
     }
 
     .container2 {
@@ -120,4 +121,26 @@
         border: 2px solid white; 
     }
 
+    @media screen and (max-width: 768px) {
+        .container2 h2 {
+            font-size: 1.8rem;
+            width: 100%;
+            padding: 0 15px;
+            margin: 0 auto;
+        }
+
+        .parrafo{
+            font-size: 1rem;
+            padding: 0 20px;
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 500px;
+        }
+
+        .container4{
+            flex-direction: column;
+            padding-top: 20px;
+        }
+    }
 </style>

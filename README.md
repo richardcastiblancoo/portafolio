@@ -7,7 +7,7 @@ Bienvenido a mi portafolio web. Este proyecto es una muestra de mis habilidades 
 ## Características
 - Diseño moderno y responsive
 - Secciones para proyectos, experiencia y contacto
-- Implementado con Astro, TypeScript y React
+- Implementado con Astro
 - Personalizable con facilidad
 
 ## Tecnologías Utilizadas
@@ -59,7 +59,7 @@ npm run build
 Luego, puedes desplegarlo en plataformas como Vercel o Netlify.
 
 ## Contacto
-Si deseas contactarme, visita la sección de contacto en el portafolio o envíame un correo a [Richardcastiblanco@gmail.com](mailto:Richardcastiblanco@gmail.com).
+Si deseas contactarme, visita la sección de contacto en el portafolio o envíame un correo a [Richardcastiblanco4@gmail.com](mailto:Richardcastiblanco4@gmail.com).
 
 ¡Gracias por visitar mi portafolio! 🚀
 
