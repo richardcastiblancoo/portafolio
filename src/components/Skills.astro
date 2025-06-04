@@ -1,0 +1,92 @@
+<section class="skills-section">
+    <h2>Mis Habilidades</h2>
+    
+    <div class="skills-container">
+        <div class="skill-category">
+            <h3>⌨️ Frontend</h3>
+            <div class="skills-grid">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Astro</span>
+                <span class="skill-tag">Tailwind CSS</span>
+                <span class="skill-tag">WordPress</span>
+            </div>
+        </div>
+
+        <div class="skill-category">
+            <h3>⚙️ Backend</h3>
+            <div class="skills-grid">
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">PHP</span>
+                <span class="skill-tag">Mysql</span>
+                <span class="skill-tag">Json</span>
+            </div>
+        </div>
+
+        <div class="skill-category">
+            <h3>🎨 UI/UX Design</h3>
+            <div class="skills-grid">
+                <span class="skill-tag">Figma</span>
+                <span class="skill-tag">Responsive Design</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .skills-section {
+        padding: 2rem;
+        background-color: #0a0a1a;
+        color: #fff;
+    }
+
+    h2 {
+        color: white;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .skills-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .skill-category h3 {
+        color: #fff;
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .skills-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    .skill-tag {
+        background-color: #2d2b3a;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+    }
+
+    .skill-tag:hover {
+        background-color: #b197fc;
+        transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+        .skills-container {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>

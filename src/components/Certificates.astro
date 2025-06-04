@@ -1,0 +1,70 @@
+---
+---
+
+<section class="certificates">
+    <h2>Certificados</h2>
+    <p>Explora mi trayectoria de aprendizaje a través de los certificados que he obtenido.</p>
+    
+    <div class="certificates-grid">
+        <div class="certificate-card">
+            <img src="/sqlrichard.webp" alt="Certificado INA" />
+        </div>
+        <div class="certificate-card">
+            <img src="/webrichard.webp" alt="Certificado INA" />
+        </div>
+        <div class="certificate-card">
+            <img src="/pythonrichard.webp" alt="Certificado INA" />
+        </div>
+    </div>
+</section>
+
+<style>
+    .certificates {
+        padding: 4rem 2rem;
+        background-color: #0a0a1a;
+        color: white;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+        color: #888;
+        margin-bottom: 3rem;
+    }
+
+    .certificates-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .certificate-card {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+    .certificate-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .certificate-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @media (max-width: 768px) {
+        .certificates-grid {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+    }
+</style>

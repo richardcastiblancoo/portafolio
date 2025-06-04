@@ -1,6 +1,6 @@
 # Portafolio Web - Richard
 
-![Vista previa del portafolio](public/portafolioweb-1img.png)
+![Vista previa del portafolio](public/portada-1.png)
 
 Bienvenido a mi portafolio web. Este proyecto es una muestra de mis habilidades y experiencia en desarrollo web.
 
