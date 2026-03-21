@@ -1,0 +1,281 @@
+---
+// Formulario.astro
+// Este componente incluye un diseño moderno, buena UX y es fácilmente personalizable.
+// Utiliza formsubmit.co para procesar el formulario sin necesidad de backend.
+---
+
+<section class="contact-section" id="contacto">
+  <div class="form-container">
+    <div class="form-header">
+      <h2>Agendar Cita</h2>
+      <p>Rellena el formulario para agendar una cita para el diseño o página web de tu negocio. Estaré encantado de ayudarte a crecer.</p>
+    </div>
+
+    <!-- 
+      Este formulario no necesita action porque se procesa con JavaScript
+      para redirigir a WhatsApp
+    -->
+    <form id="whatsapp-form" class="custom-form">
+      
+      <div class="form-group">
+        <label for="nombre">Nombre completo</label>
+        <div class="input-wrapper">
+          <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required autocomplete="name">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Correo electrónico</label>
+        <div class="input-wrapper">
+          <input type="email" id="email" name="email" placeholder="tu@correo.com" required autocomplete="email">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="servicio">¿Qué servicio necesitas para tu negocio?</label>
+        <div class="input-wrapper">
+          <select id="servicio" name="servicio" required>
+            <option value="" disabled selected>Selecciona un servicio</option>
+            <option value="Diseño de Página Web">Creacion de Página Web</option>
+            <option value="Diseño Gráfico / Branding">Diseño de Página Web</option>
+            <option value="Mantenimiento / Optimización">Mantenimiento / Optimización</option>
+            <option value="Asesoría / Consultoría">Asesoría / Consultoría</option>
+            <option value="Otro">Otro servicio</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="mensaje">Cuéntame sobre tu proyecto</label>
+        <div class="input-wrapper">
+          <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe brevemente el negocio y lo que tienes en mente..." required></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">
+        <span>Agendar por WhatsApp</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      </button>
+    </form>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('whatsapp-form');
+    
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Reemplaza este número por tu número de WhatsApp real (incluye código de país, ej: 57 para Colombia)
+        const numeroWhatsApp = "573025453611"; 
+        
+        // Obtener los valores del formulario
+        const nombre = document.getElementById('nombre').value;
+        const email = document.getElementById('email').value;
+        const servicio = document.getElementById('servicio').value;
+        const mensaje = document.getElementById('mensaje').value;
+        
+        // Construir el mensaje formateado para WhatsApp
+        const textoWhatsApp = `¡Hola Richard! 👋%0A%0AMi nombre es *${nombre}*.%0AMi correo: ${email}%0A%0AEstoy interesado/a en el servicio de: *${servicio}*.%0A%0A*Detalles del proyecto:*%0A${mensaje}`;
+        
+        // Crear la URL de redirección a WhatsApp
+        const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${textoWhatsApp}`;
+        
+        // Abrir en una nueva pestaña
+        window.open(urlWhatsApp, '_blank');
+        
+        // Opcional: resetear el formulario después de enviar
+        // form.reset();
+      });
+    }
+  });
+</script>
+
+<style>
+  .contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 1.5rem;
+    background-color: #0a0a1a;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  .form-container {
+    background: #151525;
+    max-width: 650px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 3.5rem 3rem;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5), 0 10px 15px -5px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .form-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .form-header h2 {
+    font-size: 2.25rem;
+    color: white;
+    margin-bottom: 0.75rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+  }
+
+  .form-header p {
+    color: #a0a0a0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .custom-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    margin-left: 0.25rem;
+  }
+
+  .input-wrapper {
+    position: relative;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.875rem 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font-size: 1rem;
+    color: white;
+    background-color: #0a0a1a;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    font-family: inherit;
+  }
+
+  .form-group input:hover,
+  .form-group select:hover,
+  .form-group textarea:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #25d366; /* Verde de WhatsApp */
+    background-color: #0a0a1a;
+    box-shadow: 0 0 0 4px rgba(37, 211, 102, 0.1);
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: #64748b;
+  }
+
+  .form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2364748b'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.25rem;
+    padding-right: 2.5rem;
+  }
+
+  .form-group select option {
+    background-color: #151525;
+    color: white;
+  }
+
+  .form-group select:invalid {
+    color: #64748b;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.5;
+  }
+
+  .submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    background-color: #25d366; /* Verde de WhatsApp */
+    color: #0a0a1a; /* Texto oscuro para contrastar con el verde */
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding: 1.125rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+  }
+
+  .submit-btn:hover {
+    background-color: #128c7e; /* Hover verde oscuro de WhatsApp */
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+  }
+
+  .submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+
+  .submit-btn .icon {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .submit-btn:hover .icon {
+    transform: translateX(4px) translateY(-4px);
+  }
+
+  /* Diseño Responsivo */
+  @media (max-width: 640px) {
+    .form-container {
+      padding: 2.5rem 1.5rem;
+      border-radius: 16px;
+    }
+    
+    .form-header {
+      margin-bottom: 2rem;
+    }
+
+    .form-header h2 {
+      font-size: 1.75rem;
+    }
+
+    .form-header p {
+      font-size: 1rem;
+      max-width: 100%;
+    }
+
+    .contact-section {
+      padding: 3rem 1rem;
+    }
+  }
+</style>

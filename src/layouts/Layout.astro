@@ -4,52 +4,125 @@ const { title = "Richard Castiblanco | Portafolio Web" } = Astro.props;
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<meta name="description" content="Soy un profesional altamente motivado, en constante desarrollo de mis habilidades y enfocado en el crecimiento continuo. Tengo plena confianza en mi capacidad para alcanzar nuevos desafíos, aportar soluciones innovadoras y seguir evolucionando en mi carrera.">
-		<meta name="keywords" content="Inicio, proyectos, experiencia, certificados, contacto.">
-		<meta name="author" content="richard castiblanco">
-		<meta name="robots" content="index, follow" />
-		
-		<!-- Open Graph -->
-		<meta property="og:title" content="Portafolio web richard castiblanco">
-		<meta property="og:description" content="Soy un profesional altamente motivado, en constante desarrollo de mis habilidades y enfocado en el crecimiento continuo. Tengo plena confianza en mi capacidad para alcanzar nuevos desafíos, aportar soluciones innovadoras y seguir evolucionando en mi carrera.">
-		<meta property="og:image" content="https://tuweb.com/imagen.jpg">
-		<meta property="og:url" content="https://www.facebook.com/richard.castiblanco.58/">
-		<meta property="og:type" content="website">
-		
-		
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:title" content="Portafolio web richard castiblanco">
-		<meta name="twitter:description" content="Soy un profesional altamente motivado, en constante desarrollo de mis habilidades y enfocado en el crecimiento continuo. Tengo plena confianza en mi capacidad para alcanzar nuevos desafíos, aportar soluciones innovadoras y seguir evolucionando en mi carrera.">
-		<meta name="twitter:image" content="https://tuweb.com/richard.webp">
-		<meta name="twitter:site" content="@richard01065122">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta
+      name="description"
+      content="Soy un profesional altamente motivado, en constante desarrollo de mis habilidades y enfocado en el crecimiento continuo. Tengo plena confianza en mi capacidad para alcanzar nuevos desafíos, aportar soluciones innovadoras y seguir evolucionando en mi carrera."
+    />
+    <meta
+      name="keywords"
+      content="desarrollador web, diseñador ui ux, full stack developer, programador web, diseño de páginas web, desarrollo frontend, desarrollo backend, creación de sitios web, desarrollador web colombia, diseño web colombia, programador santa marta, desarrollador full stack santa marta, agencias de desarrollo santa marta, freelancer web colombia, servicios de programación colombia, experto en diseño web, consultor web, arquitecto de software, php, mysql, bases de datos, tailwind css, framework css, next.js, javascript, react, html5, css3, desarrollo a medida, páginas corporativas, tiendas virtuales, e-commerce, sistemas pos, punto de venta web, sistemas de reservas, booking engines, plataformas de alquiler turístico, software inmobiliario, integración api, google maps api, pasarelas de pago, autenticación oauth, integraciones de software, diseño responsivo, mobile first, optimización web, seo técnico, diseño ui ux, interfaces de usuario, experiencia de usuario, glassmorphism, diseño web moderno, dark mode ui, prototipado, figma, diseño interactivo, usabilidad web, desarrollo web caribe colombiano, programador freelance colombia, diseño web magdalena, paginas web santa marta, soporte tecnico web, mantenimiento de paginas web, hostinger colombia, despliegue de aplicaciones, control de versiones, github, aplicaciones web progresivas, pwa, single page applications, spa, desarrollo de software colombia, soluciones tecnologicas, automatizacion de procesos, paneles de administracion, dashboards, web apps, landing pages, páginas de aterrizaje, rediseño web, auditoria web, velocidad de carga web, wpo, seguridad web, certificados ssl, gestion de dominios, alojamiento web, programador php colombia, experto en tailwind, desarrollador nextjs colombia, diseño web profesional, diseño web para hoteles, paginas para apartamentos, software de gestion turistica, alquileres vacacionales, reservas en linea, motor de reservas, interfaces de alto impacto, diseño cinematográfico, ui de alto contraste, desarrollo agil, metodologias agiles, freelance frontend, freelance backend, programacion a la medida, desarrollo saas, software as a service, consultoria ux, arquitectura de la informacion, flujos de usuario, mockups, diseño de aplicaciones moviles, interfaces hibridas, integracion de correos, phpmailer, notificaciones web, soluciones digitales colombia"
+    />
+    <meta name="author" content="richard castiblanco" />
+    <meta name="robots" content="index, follow" />
 
-		<!-- -->
-		
-		<link rel="icon" type="image/svg+xml" href="/codigo.png" />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Portafolio web richard castiblanco" />
+    <meta
+      property="og:description"
+      content="Soy un profesional altamente motivado, en constante desarrollo de mis habilidades y enfocado en el crecimiento continuo. Tengo plena confianza en mi capacidad para alcanzar nuevos desafíos, aportar soluciones innovadoras y seguir evolucionando en mi carrera."
+    />
+    <meta
+      property="og:image"
+      content="https://richardcastiblanco.xyz/richi2.webp"
+    />
+    <meta
+      property="og:url"
+      content="https://www.facebook.com/richard.castiblanco.58/"
+    />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Portafolio web richard castiblanco" />
+    <meta
+      name="twitter:description"
+      content="Soy un profesional altamente motivado, en constante desarrollo de mis habilidades y enfocado en el crecimiento continuo. Tengo plena confianza en mi capacidad para alcanzar nuevos desafíos, aportar soluciones innovadoras y seguir evolucionando en mi carrera."
+    />
+    <meta name="twitter:image" content="https://richardcastiblanco.xyz/richi2.webp" />
+    <meta name="twitter:site" content="@richard01065122" />
+
+    <!-- -->
+
+    <link rel="icon" type="image/svg+xml" href="/codigo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+
+    <style>
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #13a4ec;
+        border-radius: 0px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #0f8bc7;
+      }
+    </style>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-TTJXKDWP");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-TTJXKDWP"
+        height="0"
+        width="0"
+        style="display:none;visibility:hidden"></iframe></noscript
+    >
+    <!-- End Google Tag Manager (noscript) -->
+    <slot />
+  </body>
 </html>
 
 <style>
-	@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-	html,
-	body {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-		font-family: "Inter", sans-serif;
-		font-optical-sizing: auto;
-		font-weight: <weight>;
-		font-style: normal;
-	}
+  @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
 </style>
