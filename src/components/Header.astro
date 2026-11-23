@@ -13,10 +13,12 @@
           </span>
           WEB
         </span>
-        <span class="title-line anim-text designer-color" data-animated>DISEÑADOR UI — UX</span>
+        <span class="title-line anim-text designer-color" data-animated
+          >DISEÑADOR UI — UX</span
+        >
         <span class="title-line anim-text" data-animated>ENTUSIASTA TECH</span>
       </h1>
-      
+
       <p class="subtitle">
         Comprometido con la creación de productos innovadores, funcionales y
         fáciles de usar para ayudar a las personas a convertir sus ideas en
@@ -35,17 +37,17 @@
 
 <script>
   const initAnimation = () => {
-    const elements = document.querySelectorAll('[data-animated]');
+    const elements = document.querySelectorAll("[data-animated]");
     elements.forEach((el) => {
       const text = el.textContent?.trim() || "";
-      el.textContent = ""; 
+      el.textContent = "";
       const fragment = document.createDocumentFragment();
-      
+
       text.split("").forEach((char, i) => {
         const span = document.createElement("span");
         span.textContent = char === " " ? "\u00A0" : char;
         span.className = "letter";
-        span.style.setProperty('--d', `${i * 0.05}s`);
+        span.style.setProperty("--d", `${i * 0.05}s`);
         fragment.appendChild(span);
       });
       el.appendChild(fragment);
@@ -64,7 +66,7 @@
     position: relative;
     overflow: hidden;
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
   }
 
@@ -72,7 +74,8 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-image: linear-gradient(#ffffff0d 1px, transparent 1px),
+    background-image:
+      linear-gradient(#ffffff0d 1px, transparent 1px),
       linear-gradient(90deg, #ffffff0d 1px, transparent 1px);
     background-size: 30px 30px;
     opacity: 0.3;
@@ -101,8 +104,8 @@
     letter-spacing: -0.02em;
   }
 
-  .title-line { 
-    display: block; 
+  .title-line {
+    display: block;
     margin-bottom: 0.5rem;
   }
 
@@ -153,18 +156,18 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .primary { 
-    background-color: #6b6bff; 
-    color: white; 
+  .primary {
+    background-color: #6b6bff;
+    color: white;
     box-shadow: 0 4px 15px rgba(107, 107, 255, 0.3);
   }
 
-  .secondary { 
-    border: 2px solid #6b6bff; 
-    color: white; 
+  .secondary {
+    border: 2px solid #6b6bff;
+    color: white;
   }
 
-  .btn:hover { 
+  .btn:hover {
     transform: translateY(-5px);
     filter: brightness(1.1);
   }
@@ -216,7 +219,7 @@
     }
 
     .profile-pic {
-        margin: 0 5px;
+      margin: 0 5px;
     }
   }
 </style>
